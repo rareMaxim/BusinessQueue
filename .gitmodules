@@ -1,3 +1,6 @@
 [submodule "ViewNavigator"]
 	path = ViewNavigator
 	url = https://github.com/rareMaxim/ViewNavigator.git
+[submodule "FluentUI"]
+	path = FluentUI
+	url = https://github.com/rareMaxim/FluentUI.git
