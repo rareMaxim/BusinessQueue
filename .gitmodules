@@ -1,0 +1,3 @@
+[submodule "ViewNavigator"]
+	path = ViewNavigator
+	url = https://github.com/rareMaxim/ViewNavigator.git
