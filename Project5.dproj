@@ -140,6 +140,9 @@
         <DCCReference Include="BusinessQueue.Client.pas"/>
         <DCCReference Include="BusinessQueue.Clerk.pas"/>
         <DCCReference Include="BusinessQueue.Sheduling.pas"/>
+        <DCCReference Include="BusinessQueue.Task.pas"/>
+        <DCCReference Include="BusinessQueue.Provider.pas"/>
+        <DCCReference Include="BusinessQueue.Core.JsonConverters.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

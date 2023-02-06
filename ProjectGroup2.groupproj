@@ -7,7 +7,7 @@
             <Dependencies/>
         </Projects>
         <Projects Include="Shedule\Project6.dproj">
-            <Dependencies/>
+            <Dependencies>Project5.dproj</Dependencies>
         </Projects>
     </ItemGroup>
     <ProjectExtensions>
@@ -26,13 +26,13 @@
     <Target Name="Project5:Make">
         <MSBuild Projects="Project5.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Project6">
+    <Target Name="Project6" DependsOnTargets="Project5">
         <MSBuild Projects="Shedule\Project6.dproj"/>
     </Target>
-    <Target Name="Project6:Clean">
+    <Target Name="Project6:Clean" DependsOnTargets="Project5:Clean">
         <MSBuild Projects="Shedule\Project6.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Project6:Make">
+    <Target Name="Project6:Make" DependsOnTargets="Project5:Make">
         <MSBuild Projects="Shedule\Project6.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">

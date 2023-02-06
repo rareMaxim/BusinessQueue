@@ -1,0 +1,174 @@
+{
+    "Clerks": {
+        "0684985555": {
+            "FirstName": "Maxim",
+            "LastName": "S",
+            "SurName": "",
+            "Login": "0684985555",
+            "Password": "",
+            "IsActive": true,
+            "SupportedServices": [],
+            "Shedule": {
+                "ByDate": {},
+                "ByDay": {}
+            }
+        },
+        "0934985555": {
+            "FirstName": "Alyona",
+            "LastName": "S",
+            "SurName": "",
+            "Login": "0934985555",
+            "Password": "",
+            "IsActive": true,
+            "SupportedServices": [],
+            "Shedule": {
+                "ByDate": {
+                    "01.02.2023": {
+                        "Items": [
+                            {
+                                "Start": "0:00:00",
+                                "Stop": "23:59:59",
+                                "Name": "Default shedule",
+                                "Tag": 0
+                            },
+                            {
+                                "Start": "8:00:00",
+                                "Stop": "17:00:00",
+                                "Name": "WorkTime",
+                                "Tag": 100
+                            },
+                            {
+                                "Start": "10:00:00",
+                                "Stop": "11:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            },
+                            {
+                                "Start": "13:00:00",
+                                "Stop": "14:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            }
+                        ]
+                    }
+                },
+                "ByDay": {
+                    "3": {
+                        "Items": [
+                            {
+                                "Start": "0:00:00",
+                                "Stop": "23:59:59",
+                                "Name": "Default shedule",
+                                "Tag": 0
+                            },
+                            {
+                                "Start": "8:00:00",
+                                "Stop": "17:00:00",
+                                "Name": "WorkTime",
+                                "Tag": 100
+                            },
+                            {
+                                "Start": "12:00:00",
+                                "Stop": "13:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            }
+                        ]
+                    },
+                    "1": {
+                        "Items": [
+                            {
+                                "Start": "0:00:00",
+                                "Stop": "23:59:59",
+                                "Name": "Default shedule",
+                                "Tag": 0
+                            },
+                            {
+                                "Start": "8:00:00",
+                                "Stop": "17:00:00",
+                                "Name": "WorkTime",
+                                "Tag": 100
+                            },
+                            {
+                                "Start": "12:00:00",
+                                "Stop": "13:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            }
+                        ]
+                    },
+                    "2": {
+                        "Items": [
+                            {
+                                "Start": "0:00:00",
+                                "Stop": "23:59:59",
+                                "Name": "Default shedule",
+                                "Tag": 0
+                            },
+                            {
+                                "Start": "8:00:00",
+                                "Stop": "17:00:00",
+                                "Name": "WorkTime",
+                                "Tag": 100
+                            },
+                            {
+                                "Start": "12:00:00",
+                                "Stop": "13:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            }
+                        ]
+                    },
+                    "4": {
+                        "Items": [
+                            {
+                                "Start": "0:00:00",
+                                "Stop": "23:59:59",
+                                "Name": "Default shedule",
+                                "Tag": 0
+                            },
+                            {
+                                "Start": "8:00:00",
+                                "Stop": "17:00:00",
+                                "Name": "WorkTime",
+                                "Tag": 100
+                            },
+                            {
+                                "Start": "12:00:00",
+                                "Stop": "13:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            }
+                        ]
+                    },
+                    "5": {
+                        "Items": [
+                            {
+                                "Start": "0:00:00",
+                                "Stop": "23:59:59",
+                                "Name": "Default shedule",
+                                "Tag": 0
+                            },
+                            {
+                                "Start": "8:00:00",
+                                "Stop": "17:00:00",
+                                "Name": "WorkTime",
+                                "Tag": 100
+                            },
+                            {
+                                "Start": "12:00:00",
+                                "Stop": "13:00:00",
+                                "Name": "EatTime",
+                                "Tag": 1
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "Tasks": [],
+    "Provider": {
+        "FName": "Центр надання адміністративних послуг м. Мелітополь"
+    }
+}
