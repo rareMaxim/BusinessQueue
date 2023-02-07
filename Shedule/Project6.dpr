@@ -7,7 +7,7 @@ uses
   BusinessQueue.Clerk in '..\BusinessQueue.Clerk.pas',
   BusinessQueue.Client in '..\BusinessQueue.Client.pas',
   BusinessQueue in '..\BusinessQueue.pas',
-  BusinessQueue.Service in '..\BusinessQueue.Service.pas',
+  BusinessQueue.Services in '..\BusinessQueue.Services.pas',
   BusinessQueue.Sheduling in '..\BusinessQueue.Sheduling.pas',
   BusinessQueue.Task in '..\BusinessQueue.Task.pas',
   BusinessQueue.Provider in '..\BusinessQueue.Provider.pas',

@@ -3,7 +3,7 @@
 interface
 
 uses
-  BusinessQueue.Service,
+  BusinessQueue.Services,
   BusinessQueue.Sheduling,
   System.Generics.Collections,
   System.JSON.Serializers,
@@ -44,6 +44,20 @@ type
     property Shedule: TBQSheduling read FShedule write FShedule;
   end;
 
+  TBQClerks = class
+  private type
+    TJsonClerkConverter = class(TJsonStringDictionaryConverter<TBQClerk>);
+  private
+    [JsonName('Clerks')]
+    [JsonConverter(TJsonClerkConverter)]
+    FClerks: TObjectDictionary<string, TBQClerk>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    procedure AddClerk(AClerk: TBQClerk);
+    property Clerks: TObjectDictionary<string, TBQClerk> read FClerks;
+  end;
+
 implementation
 
 constructor TBQClerk.Create;
@@ -58,6 +72,25 @@ begin
   FShedule.Free;
   FSupportedServices.Free;
   inherited Destroy;
+end;
+
+constructor TBQClerks.Create;
+begin
+  inherited Create;
+  FClerks := TObjectDictionary<string, TBQClerk>.Create([doOwnsValues]);
+end;
+
+destructor TBQClerks.Destroy;
+begin
+  FClerks.Free;
+  inherited Destroy;
+end;
+
+{ TBQClerks }
+
+procedure TBQClerks.AddClerk(AClerk: TBQClerk);
+begin
+  FClerks.AddOrSetValue(AClerk.Login, AClerk);
 end;
 
 end.

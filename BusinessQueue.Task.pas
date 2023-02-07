@@ -4,7 +4,7 @@ interface
 
 uses
   BusinessQueue.Client,
-  BusinessQueue.Service;
+  BusinessQueue.Services;
 
 type
   TBQTask = class

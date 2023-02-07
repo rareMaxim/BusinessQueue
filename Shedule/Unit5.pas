@@ -64,12 +64,12 @@ begin
   FBQ := TBussinessQueue.Create();
   FBQ.LoadConfigFromJson('cnap.json');
   FBQ.Provider.Name := 'Центр надання адміністративних послуг м. Мелітополь';
-  FBQ.AddClerk(CreateClerkSysoev);
-  FBQ.AddClerk(CreateClerkSarzhan);
+  FBQ.Clerks.AddClerk(CreateClerkSysoev);
+  FBQ.Clerks.AddClerk(CreateClerkSarzhan);
   var
-  LSheduleItems := FBQ.Clerks['0934985555'].Shedule.GetSheduleByDate(EncodeDate(2023, 02, 01));
+  LSheduleItems := FBQ.Clerks.Clerks['0934985555'].Shedule.GetSheduleByDate(EncodeDate(2023, 02, 01));
   var
-  LTotalWorkDay := FBQ.Clerks['0934985555'].Shedule.TotalWorkMinutes(EncodeDate(2023, 02, 01));
+  LTotalWorkDay := FBQ.Clerks.Clerks['0934985555'].Shedule.TotalWorkMinutes(EncodeDate(2023, 02, 01));
 end;
 
 function TForm5.CreateClerkSarzhan: TBQClerk;

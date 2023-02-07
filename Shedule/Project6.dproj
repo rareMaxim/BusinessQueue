@@ -199,7 +199,7 @@
         <DCCReference Include="..\BusinessQueue.Clerk.pas"/>
         <DCCReference Include="..\BusinessQueue.Client.pas"/>
         <DCCReference Include="..\BusinessQueue.pas"/>
-        <DCCReference Include="..\BusinessQueue.Service.pas"/>
+        <DCCReference Include="..\BusinessQueue.Services.pas"/>
         <DCCReference Include="..\BusinessQueue.Sheduling.pas"/>
         <DCCReference Include="..\BusinessQueue.Task.pas"/>
         <DCCReference Include="..\BusinessQueue.Provider.pas"/>

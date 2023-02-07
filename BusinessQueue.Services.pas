@@ -1,4 +1,4 @@
-﻿unit BusinessQueue.Service;
+﻿unit BusinessQueue.Services;
 
 interface
 

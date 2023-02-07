@@ -6,7 +6,7 @@ uses
   BusinessQueue.Clerk,
   BusinessQueue.Client,
   BusinessQueue.Provider,
-  BusinessQueue.Service,
+  BusinessQueue.Services,
   BusinessQueue.Task,
   System.JSON.Converters,
   System.JSON.Serializers,
@@ -16,26 +16,29 @@ type
 
   TBussinessQueue = class
   private type
-    TJsonClerkConverter = class(TJsonStringDictionaryConverter<TBQClerk>);
     TJsonTaskConverter = class(TJsonListConverter<TBQTask>);
+    TJsonServisesConverter = class(TJsonListConverter<TBQService>);
   private
     [JsonName('Clerks')]
-    [JsonConverter(TJsonClerkConverter)]
-    FClerks: TObjectDictionary<string, TBQClerk>;
+    FClerks: TBQClerks;
     [JsonName('Tasks')]
     [JsonConverter(TJsonTaskConverter)]
     FTasks: TObjectList<TBQTask>;
     [JsonName('Provider')]
     FProvider: TBQProvider;
+    [JsonName('Services')]
+    [JsonConverter(TJsonServisesConverter)]
+    FServices: TObjectList<TBQService>;
   public
-    procedure AddClerk(AClerk: TBQClerk);
+
     constructor Create;
     destructor Destroy; override;
     procedure LoadConfigFromJson(const AFileName: string);
     procedure SaveConfigFromJson(const AFileName: string);
     procedure NewTask(AService: TBQService; AClient: TBQClient); virtual; abstract;
     property Provider: TBQProvider read FProvider;
-    property Clerks: TObjectDictionary<string, TBQClerk> read FClerks;
+    property Clerks: TBQClerks read FClerks write FClerks;
+    property Services: TObjectList<TBQService> read FServices;
   end;
 
 implementation
@@ -44,21 +47,18 @@ uses
   System.SysUtils,
   System.IOUtils;
 
-procedure TBussinessQueue.AddClerk(AClerk: TBQClerk);
-begin
-  FClerks.AddOrSetValue(AClerk.Login, AClerk);
-end;
-
 constructor TBussinessQueue.Create;
 begin
   inherited Create;
-  FClerks := TObjectDictionary<string, TBQClerk>.Create([doOwnsValues]);
   FTasks := TObjectList<TBQTask>.Create();
   FProvider := TBQProvider.Create();
+  FServices := TObjectList<TBQService>.Create();
+  FClerks := TBQClerks.Create();
 end;
 
 destructor TBussinessQueue.Destroy;
 begin
+  FServices.Free;
   FProvider.Free;
   FTasks.Free;
   FClerks.Free;
